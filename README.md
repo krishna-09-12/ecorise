@@ -1,7 +1,7 @@
-# EcoRise: Zero to Hero - Waste Management Application
+# EcoRise: Waste Management Application
 
 ## 🌟 Key Idea
-EcoRise is an innovative, AI and Web3-enabled waste management platform that incentivizes users to report and collect waste. By gamifying waste management, we turn an everyday chore into a rewarding experience, transforming communities from "Zero to Hero".
+EcoRise is an innovative, AI and Web3-enabled waste management platform that incentivizes users to report and collect waste. By gamifying waste management, we turn an everyday chore into a rewarding experience.
 
 ## 🎯 Aim
 To create a sustainable, clean environment by empowering individuals with technology. We aim to bridge the gap between waste generators and waste collectors through a decentralized, transparent, and rewarding ecosystem.
