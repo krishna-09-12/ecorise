@@ -1,0 +1,78 @@
+erDiagram
+    users ||--o{ reports : "submits (userId)"
+    users ||--o{ reports : "collects (collectorId)"
+    users ||--o{ rewards : "has"
+    users ||--o{ notifications : "receives"
+    users ||--o{ transactions : "makes"
+    users ||--o{ collected_wastes : "collects"
+    reports ||--o{ collected_wastes : "has"
+    
+    users {
+        serial id PK
+        varchar email "UK"
+        varchar name
+        varchar phone
+        text address
+        boolean notifications
+        timestamp created_at
+    }
+    
+    reports {
+        serial id PK
+        integer user_id FK
+        text location
+        text waste_type
+        text amount
+        text image_url
+        jsonb verification_result
+        varchar status
+        timestamp created_at
+        integer collector_id FK
+    }
+    
+    rewards {
+        serial id PK
+        integer user_id FK
+        integer points
+        integer level
+        timestamp created_at
+        timestamp updated_at
+        boolean is_available
+        text description
+        varchar name
+        text collection_info
+    }
+    
+    collected_wastes {
+        serial id PK
+        integer report_id FK
+        integer collector_id FK
+        timestamp collection_date
+        varchar status
+    }
+    
+    notifications {
+        serial id PK
+        integer user_id FK
+        text message
+        varchar type
+        boolean is_read
+        timestamp created_at
+    }
+    
+    transactions {
+        serial id PK
+        integer user_id FK
+        varchar type
+        integer amount
+        text description
+        timestamp date
+    }
+    
+    otp_challenges {
+        serial id PK
+        varchar email
+        varchar code
+        timestamp expires_at
+        timestamp created_at
+    }
